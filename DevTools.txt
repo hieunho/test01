@@ -1,0 +1,142 @@
+
+GET /_cat/indices?v
+
+DELETE /devicedata?pretty
+
+----------------------------------------
+
+PUT /device?pretty
+
+PUT /device-data?pretty
+
+PUT /device-data?pretty
+{
+    "mappings" : {
+        "data" : {
+            "properties" : {
+                "time" : { "type" : "date" },
+                "device-id":{ "type" : "text" },
+                "house-temp":{ "type" : "integer" },
+                "plant-temp":{ "type" : "integer" },
+                "humidity":{ "type" : "integer" },
+                "light":{ "type" : "integer" },
+                "capture-img":{ "type" : "text" },
+                "plant-height":{ "type" : "float" },
+                "water-level":{ "type" : "integer" },
+                "pH-level":{ "type" : "integer" },
+                "last-spray":{ "type" : "date" }
+            }
+        }
+    }
+}
+
+PUT /device-data/data/1?pretty
+{
+  "device-id":"1",
+  "time":"2018-01-01",
+  "house-temp":30,
+  "plant-temp":25,
+  "humidity":100,
+  "light":80,
+  "capture-img":"",
+  "plant-height":1.2,
+  "water-level":50,
+  "pH-level":5,
+  "last-spray":"2018-01-01T14:00:00"
+}
+
+PUT /device-data/data/2?pretty
+{
+  "device-id":"1",
+  "time":"2018-01-02",
+  "house-temp":40,
+  "plant-temp":35,
+  "humidity":90,
+  "light":90,
+  "capture-img":"",
+  "plant-height":1.2,
+  "water-level":60,
+  "pH-level":6,
+  "last-spray":"2018-01-01T10:00:00"
+}
+
+PUT /device-data/data/3?pretty
+{
+  "device-id":"1",
+  "time":"2018-01-03",
+  "house-temp":44,
+  "plant-temp":38,
+  "humidity":95,
+  "light":85,
+  "capture-img":"",
+  "plant-height":1.2,
+  "water-level":50,
+  "pH-level":4,
+  "last-spray":"2018-01-01T09:10:00"
+}
+
+PUT /device-data/data/4?pretty
+{
+  "device-id":"1",
+  "time":"2018-01-04",
+  "house-temp":44,
+  "plant-temp":38,
+  "humidity":95,
+  "light":85,
+  "capture-img":"",
+  "plant-height":1.2,
+  "water-level":50,
+  "pH-level":4,
+  "last-spray":"2018-01-04T09:10:00"
+}
+
+PUT /device-data/data/5?pretty
+{
+  "device-id":"1",
+  "time":"2018-01-08",
+  "house-temp":44,
+  "plant-temp":25,
+  "humidity":60,
+  "light":98,
+  "capture-img":"",
+  "plant-height":1.2,
+  "water-level":50,
+  "pH-level":4,
+  "last-spray":"2018-01-08T09:10:00"
+}
+
+--------------------------------------
+PUT /devices?pretty
+{
+    "mappings" : {
+        "data" : {
+            "properties" : {
+            }
+        }
+    }
+}
+
+PUT /devices/data/1
+{
+  "device-id":"1"
+}
+
+DELETE /devicedata?pretty
+
+DELETE /devices?pretty
+
+GET /_cat/indices?v
+
+
+PUT /devicedata?pretty
+{
+    "mappings" : {
+        "data" : {
+            "properties" : {
+                "id":{ "type" : "text" },
+                "time" : { "type" : "date" },
+                "device-id":{ "type" : "text" }
+            }
+        }
+    }
+}

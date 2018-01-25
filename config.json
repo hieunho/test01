@@ -1,0 +1,11 @@
+{
+    "token": ["token1","token2","token3"],
+    "devicename": ["device1","device2","device3"],
+    "HumiditySensor": ["H_1","H_2","H_3"],
+    "TemperatureSensor": ["T_1","T_2","T_3"],
+    "PhSensor": ["PH_1","PH_2","PH_3"],
+    "EcSensor": ["EC_1","EC_2","EC_3"],
+    "LightSensor": ["light_1","light_2","light_3"],
+    "TimeStamp": ["TS_1","TS_2","TS_3"]
+}
+
